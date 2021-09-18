@@ -79,18 +79,50 @@ $("#task-form-modal .btn-primary").click(function() {
   }
 });
 
-//text selector and click function edit task
+//click on text for task and seemlessly edit and continue adding
 $(".list-group").on("click", "p", function() {
   var text = $(this)
   .text()
   .trim();
-});
+
 
 var textInput = $("<textarea>")
   .addClass("form-control")
   .val(text);
 
 $(this).replaceWith(textInput);
+});
+
+//Editable Text Unfocuses when Completed
+$(".list-group").on("blur", "textarea", function() {
+  
+  //textarea current value/text
+   var text = $(this)
+   .val()
+   .trim();
+  //Get Parent UL ID Attribute
+  var status = $(this)
+   .closest(".list-group")
+   .attr("id")
+   .replace("list-", "");
+  //Get the Task Position in the List of Li other Elements
+   var index = $(this)
+   .closest(".list-group-item")
+   .index();
+
+  //staus
+  tasks[status][index].text = text;
+  saveTasks();
+
+    //Recreate Original Box 
+    var taskP = $("<p>")
+    .addClass("m-1")
+    .text(text);
+ 
+   //Replace Text Area with Original
+   $(this).replaceWith(taskP);
+});
+
 
 // remove all tasks
 $("#remove-tasks").on("click", function() {
