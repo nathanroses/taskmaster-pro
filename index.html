@@ -14,12 +14,12 @@
 <body>
 
   <div class="row min-vh-100 no-gutters">
-    <header class="col-12 col-lg-3 bg-dark text-light d-flex flex-column p-4 p-lg-3">
+    <header class="col-12 col-lg-3 bg-dark text-light sticky-top d-flex flex-column p-4 p-lg-3">
       <h1 class="text-center">Taskmaster Pro Edition</h1>
       <button id="create-task" class="btn btn-block btn-success" data-toggle="modal" data-target="#task-form-modal">Add
         Task</button>
       <button id="remove-tasks" class="btn btn-block btn-danger">Delete All Tasks</button>
-      <p class="mt-auto"> Task Manager Pro in a Day to Day Manager. You can Organize Your Task in Four Columns (To-Do, in Progress, in Review and Completed). 
+      <p class="mt-auto d-none d-lg-block"> Task Manager Pro in a Day to Day Manager. You can Organize Your Task in Four Columns (To-Do, in Progress, in Review and Completed). 
         This Can Bring Order and Function to Your Daily Life with Taskmaster Reminders and Easy of Edit of Each Task. 
       </p>
     </header>
@@ -29,7 +29,7 @@
       <!--TO DO LIST-->
        <div class="col-12 col-md-6 col-xl-3 mb-3">
          <div class="card">
-         <h4 class="card-header">
+         <h4 class="card-header bg-dark text-light">
            To Do</h4>
          <ul id="list-toDo" class="list-group list-group-flush">
           <li class="list-group-item">
@@ -43,7 +43,7 @@
        <!--IN PROGRESS LIST-->
         <div class="col-12 col-md-6 col-xl-3 mb-3">
           <div class="card">
-          <h4 class="card-header">
+          <h4 class="card-header bg-dark text-light">
             In Progress</h4>
           <ul id="list-inProgress" class="list-group list-group-flush">
             <li class="list-group-item">
@@ -57,7 +57,7 @@
         <!--IN REVIEW LIST START-->
          <div class="col-12 col-md-6 col-xl-3 mb-3">
            <div class="card">
-           <h4 class="card-header">
+           <h4 class="card-header bg-dark text-light">
              In Review</h4>
           <ul id="list-inReview" class="list-group list-group-flush">
             <li class="list-group-item">
@@ -71,7 +71,7 @@
         <!--DONE LIST-->
         <div class="col-12 col-md-6 col-xl-3 mb-3">
           <div class="card">
-          <h4 class="card-header">
+          <h4 class="card-header bg-dark text-light">
             Done</h4>
           <ul id="list-done" class="list-group list-group-flush">
             <li class="list-group-item">
