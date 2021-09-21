@@ -24,7 +24,7 @@
       </p>
     </header>
   <!--START-->
-    <main class="col-12 col-lg-9">
+    <main class="col-12 col-lg-9 d-flex flex-column ">
       <div class="m-5 row justify-content-around">
       <!--TO DO LIST-->
        <div class="col-12 col-md-6 col-xl-3 mb-3">
@@ -32,10 +32,6 @@
          <h4 class="card-header bg-dark text-light">
            To Do</h4>
          <ul id="list-toDo" class="list-group list-group-flush">
-          <li class="list-group-item">
-            <span class="badge badge-primary badge-pill">12/01/1998</span>
-            <p class="m-1">Task for To Do</p>
-          </li>
         </ul>
         </div>
       </div> 
@@ -46,10 +42,6 @@
           <h4 class="card-header bg-dark text-light">
             In Progress</h4>
           <ul id="list-inProgress" class="list-group list-group-flush">
-            <li class="list-group-item">
-              <span class="badge badge-primary badge-pill">11/04/2033</span>
-              <p class="m-1">Simple Task in Progress</p>
-            </li>
           </ul>
         </div>
         </div>
@@ -60,10 +52,6 @@
            <h4 class="card-header bg-dark text-light">
              In Review</h4>
           <ul id="list-inReview" class="list-group list-group-flush">
-            <li class="list-group-item">
-              <span class="badge badge-primary badge-pill">11/03/2023</span>
-              <p class="m-1">Sample Task in Review</p>
-            </li>
           </ul> 
           </div>
          </div>
@@ -74,22 +62,16 @@
           <h4 class="card-header bg-dark text-light">
             Done</h4>
           <ul id="list-done" class="list-group list-group-flush">
-            <li class="list-group-item">
-              <span class="basge badge-primary badge-pill">11/03/2023</span>
-              <p class="m-1">Tasks Done</p>
-            </li>
           </ul>
         </div>
         </div> 
-        <!--END OF DONE LIST-->
       </div>
-       <!--TRASH TASK RED-->
-      <div id="trash">
-        <div class="w-100 bg-danger p-3 text-center text-light display-4">
-          Drop HERE to Remove
+         <!--TRASH TASK RED-->
+          <div id="trash" class="mt-auto">
+          <div class="w-100 bg-danger p-3 text-center text-light display-4">
+            Drop HERE to Remove
         </div>
       </div>
-      <!--END OF TRASH TASK RED-->
     </main>
   </div>
 
