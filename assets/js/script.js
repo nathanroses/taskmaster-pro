@@ -19,7 +19,33 @@ $(".card .list-group").sortable({
     console.log("out", event.target);
   },
   update: function(event) {
-    console.log($(this).children());
+     //store array 
+     var tempArr = [];
+    //find text
+    $(this).children().each(function() {
+      var text = $(this)
+        .find("p")
+        .text()
+        .trim();
+
+      var date = $(this)
+        .find("span")
+        .text()
+        .trim();
+        
+      //add data
+      tempArr.push({
+        text: text,
+        date: date
+      });
+     });
+   //Trim Down List Id to Match the Object
+   var arrName = $(this)
+     .attr("id")
+     .replace("list-", "");
+   //Update Array on Task
+   tasks[arrName] = tempArr;
+   saveTasks();   
   }
 });
 
