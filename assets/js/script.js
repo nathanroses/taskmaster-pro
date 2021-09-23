@@ -67,6 +67,7 @@ var createTask = function(taskText, taskDate, taskList) {
   $("#list-" + taskList).append(taskLi);
 };
 
+//TASK FUNCTION
 var loadTasks = function() {
   tasks = JSON.parse(localStorage.getItem("tasks"));
 
@@ -94,19 +95,19 @@ var saveTasks = function() {
   localStorage.setItem("tasks", JSON.stringify(tasks));
 };
 
-// modal was triggered
+//MODAL WAS TRIGGERED
 $("#task-form-modal").on("show.bs.modal", function() {
   // clear values
   $("#modalTaskDescription, #modalDueDate").val("");
 });
 
-// modal is fully visible
+//MODULE IS FULLY VISIBLE
 $("#task-form-modal").on("shown.bs.modal", function() {
   // highlight textarea
   $("#modalTaskDescription").trigger("focus");
 });
 
-// save button in modal was clicked
+//SAVE BUTTON IN MODULE 
 $("#task-form-modal .btn-primary").click(function() {
   // get form values
   var taskText = $("#modalTaskDescription").val();
@@ -128,19 +129,23 @@ $("#task-form-modal .btn-primary").click(function() {
   }
 });
 
-// task text was clicked
-$(".list-group").on("click", "p", function() {
+//TASK TEXT 
+$(".list-group").on("click", "span", function() {
   // get current text of p element
-  var text = $(this)
-    .text()
-    .trim();
+  var date = $(this).text().trim();
 
-  // replace p element with a new textarea
-  var textInput = $("<textarea>").addClass("form-control").val(text);
-  $(this).replaceWith(textInput);
+  //create new input element
+  var dateInput = $("<input>").attr("type","text").addClass("form-control").val(date);
 
-  // auto focus new element
-  textInput.trigger("focus");
+  $(this).replaceWith(dateInput);
+
+  //enable jquery ui picker
+   dateInput.datepicker({
+     minDate: 1
+   });
+
+  //auto pulls calandar
+  dateInput.trigger("focus");
 });
 
 // editable field was un-focused
