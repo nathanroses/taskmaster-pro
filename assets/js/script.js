@@ -142,6 +142,10 @@ $(".list-group").on("click", "span", function() {
   //enable jquery ui picker
    dateInput.datepicker({
      minDate: 1
+     onClose: function() {
+       //calendar is closed
+       $(this).trigger("change");
+     }
    });
 
   //auto pulls calandar
@@ -194,7 +198,7 @@ $(".list-group").on("click", "span", function() {
 });
 
 // value of due date was changed
-$(".list-group").on("blur", "input[type='text']", function() {
+$(".list-group").on("change", "input[type='text']", function() {
   var date = $(this).val();
 
   // get status type and position in the list
