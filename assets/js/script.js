@@ -141,7 +141,7 @@ $(".list-group").on("click", "span", function() {
 
   //enable jquery ui picker
    dateInput.datepicker({
-     minDate: 1
+     minDate: 1,
      onClose: function() {
        //calendar is closed
        $(this).trigger("change");
