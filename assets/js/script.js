@@ -94,9 +94,6 @@ var saveTasks = function() {
   localStorage.setItem("tasks", JSON.stringify(tasks));
 };
 
-
-
-
 // modal was triggered
 $("#task-form-modal").on("show.bs.modal", function() {
   // clear values
@@ -222,6 +219,13 @@ $(".list-group").on("blur", "input[type='text']", function() {
   //Replace Text Area with Original
   $(this).replaceWith(taskP);
 });
+
+
+//due date form
+$("#modalDueDate").datepicker({
+  minDate: 1
+});
+
 
 // remove all tasks
 $("#remove-tasks").on("click", function() {
