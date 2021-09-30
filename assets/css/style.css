@@ -18,6 +18,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: rgba(0, 0, 0, 0.09);
 }
 
+
 .bottom-trash {
  opacity: 0;
  color: #f1f1f1;
@@ -34,5 +35,5 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bottom-trash-active {
-  background-color: rgba(234, 0, 39, 1;
+  background-color: rgba(234, 0, 39, 1);
 }
