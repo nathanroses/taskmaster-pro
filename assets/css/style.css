@@ -14,6 +14,25 @@ h1, h2, h3, h4, h5, h6 {
  background-color: rgba(0, 0, 0, 0.3);
 }
 
-.dropover-active{
+.dropover-active {
   background-color: rgba(0, 0, 0, 0.09);
+}
+
+.bottom-trash {
+ opacity: 0;
+ color: #f1f1f1;
+ font-size: 2.3rem;
+ font-family: "Staatliches", sans-serif;
+ transform: translate(150px);
+ transition: all .5s ease-in-out;
+ background-color: rgba(234, 0, 39, 0.07) ;
+}
+
+.bottom-trash-drag {
+  transform: translate(Y);
+  opacity: 1;
+}
+
+.bottom-trash-active {
+  background-color: rgba(234, 0, 39, 1;
 }
