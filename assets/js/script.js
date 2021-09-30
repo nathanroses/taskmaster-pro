@@ -290,9 +290,8 @@ $("#remove-tasks").on("click", function() {
  setInterval(function() {
    $(".card .list-group-item").each(function(index, el){
     auditTask(el);
-    console.log(taskEl)
    });
- }, 5000);
+ }, (1000 * 60) * 30);
 
 // load tasks for the first time
 loadTasks();
